@@ -1279,6 +1279,8 @@ L.Map = L.Evented.extend({
 		this._fireDOMEvent(e, type);
 	},
 
+	_nonBubblingEvents: ['click', 'dblclick', 'mouseover', 'mouseout', 'contextmenu'],
+
 	_fireDOMEvent: function (e, type, targets) {
 
 		if (e.type === 'click') {
@@ -1319,7 +1321,7 @@ L.Map = L.Evented.extend({
 		for (var i = 0; i < targets.length; i++) {
 			targets[i].fire(type, data, true);
 			if (data.originalEvent._stopped ||
-				(targets[i].options.nonBubblingEvents && L.Util.indexOf(targets[i].options.nonBubblingEvents, type) !== -1)) { return; }
+				(targets[i].options.bubblingEvents === false && L.Util.indexOf(this._nonBubblingEvents, type) !== -1)) { return; }
 		}
 	},
 
