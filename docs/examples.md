@@ -81,6 +81,14 @@ description="How the default map panes work to display overlays on top of tiles,
 %}
 
 
+{% include tutorial_link.html
+page="zoom-delta/"
+thumbnail="zoom-delta/thumbnail.png"
+title="Zoom delta"
+description="A deeper look into what zoom levels are, and how to tweak zooming in and out."
+%}
+
+
 
 ***
 If you find that an important tutorial is missing here, let us know!
