@@ -327,6 +327,7 @@ describe("L.Map#openPopup", function () {
 			.down().moveBy(10, 10, 20).up();
 	});
 
+
 });
 
 describe('L.Layer#_popup', function () {
@@ -389,6 +390,18 @@ describe('L.Layer#_popup', function () {
 			marker.isPopupOpen();
 		}).to.not.throwException();
 		expect(marker.isPopupOpen()).to.be(false);
+	});
+
+	it('does not throw is popup is inmediately closed', function (done) {
+
+		map.on('popupopen', function (ev) {
+			marker.closePopup();
+		});
+
+		expect(function () {
+			marker.bindPopup("new layer").openPopup();
+			done();
+		}).to.not.throwException();
 	});
 
 });
