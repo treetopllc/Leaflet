@@ -1,0 +1,16 @@
+{
+  "name": "leaflet",
+  "repository": "treetopllc/leaflet",
+  "version": "v1.0.2",
+  "description": "JavaScript library for mobile-friendly interactive maps",
+  "main": "dist/leaflet-src.js",
+  "scripts": [
+    "dist/leaflet-src.js"
+  ],
+  "images":[
+    "dist/images/*"
+  ],
+  "styles":[
+    "dist/leaflet.css"
+  ]
+}

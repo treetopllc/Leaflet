@@ -1,4 +1,3 @@
-node_modules
 .DS_Store
 tmp/**/*
 .idea
@@ -7,13 +6,10 @@ tmp/**/*
 _site
 *.sublime-*
 _site
-dist/*.js
-dist/*.map
 dist/reference.html
 coverage/
 *.js.html
 .mailmap
 bower.json
-component.json
 debug/local/
 Gemfile.lock
