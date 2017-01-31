@@ -10,6 +10,7 @@ git checkout -b build
 
 jake build[,,true]
 git add dist/leaflet-src.js dist/leaflet.js dist/leaflet-src.map -f
+git add component.json -f
 
 git commit -m "v$VERSION"
 
